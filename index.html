@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Camera Card Logger</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="app.js"></script>
+</head>
+<body class="background">
+
+<div class="card">
+  <h1 id="dynamic-title" class="title">Shoot Info - Reel - Card Type</h1>
+
+  <div class="image-container">
+    <img id="card-image" src="images/sd-card.png" alt="Memory Card" class="card-img">
+    <div class="overlay-text">
+      <div id="reel-number" class="reel-text"></div>
+      <div id="card-id" class="card-id-text"></div>
+    </div>
+  </div>
+
+  <form id="card-form" class="form">
+    <label>Date<input type="date" name="Date" required></label>
+    <label>Shoot Info<input type="text" name="Shoot Info" placeholder="Shoot Info" required></label>
+    <label>Card Type<select name="Card Type" required>
+      <option>Sony SxS</option>
+      <option>Sony AXS</option>
+      <option>Compact Flash2</option>
+      <option>CFast</option>
+      <option>Compact Flash</option>
+      <option>SD Card</option>
+      <option>Sony XQD</option>
+      <option>RED Mini-Mag</option>
+      <option>CFexpress Type A</option>
+      <option>CFexpress Type B</option>
+      <option>P2 Card</option>
+      <option>Atomos Master Caddy</option>
+      <option>Blackmagic SSD</option>
+    </select></label>
+    <label>Reel Number<input type="text" name="Reel Number" placeholder="Reel Number" required></label>
+    <label>Card ID<input type="text" name="Card ID" placeholder="Card ID" required></label>
+    <label>Camera Type<input type="text" name="Camera Type" placeholder="Camera Type" required></label>
+    <label>Operator<input type="text" name="Operator" placeholder="Operator" required></label>
+    <label>Card Loaded Time<input type="time" name="Card Loaded Time" required></label>
+    <label>Card Download Time<input type="time" name="Card Download Time" required></label>
+    <label>Card Download Drive Location<input type="text" name="Card Download Drive Location" placeholder="Drive Location" required></label>
+    <label>Ok To Format?<select name="Ok To Format?" required>
+      <option>Yes</option>
+      <option>No</option>
+    </select></label>
+    <label>Card returned to<input type="text" name="Card returned to" placeholder="Card returned to" required></label>
+
+    <div class="button-container">
+      <button type="button" onclick="generateJPEG()">Generate JPEG</button>
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+</div>
+
+</body>
+</html>
